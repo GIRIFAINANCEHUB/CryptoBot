@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoBot V2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>🤖 CryptoBot</h2>
+    <ul>
+      <li onclick="showSection('dashboard')">🏠 Dashboard</li>
+      <li onclick="showSection('trade')">📈 Trade</li>
+      <li onclick="showSection('bot')">🤖 Auto Bot</li>
+      <li onclick="showSection('indicators')">📊 Indicators</li>
+      <li onclick="showSection('portfolio')">💼 Portfolio</li>
+      <li onclick="showSection('risk')">⚠️ Risk</li>
+      <li onclick="showSection('history')">📜 History</li>
+      <li onclick="showSection('about')">ℹ️ About</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section id="dashboard" class="page active">
+      <h1>Dashboard</h1>
+      <p>BTC Price: <span id="price">$30000</span></p>
+    </section>
+
+    <section id="trade" class="page">
+      <h1>Manual Trade</h1>
+      <button onclick="buy()">Buy</button>
+      <button onclick="sell()">Sell</button>
+    </section>
+
+    <section id="bot" class="page">
+      <h1>Auto Bot</h1>
+      <button onclick="toggleBot()">Toggle Bot</button>
+      <p>Status: <span id="botStatus">OFF</span></p>
+    </section>
+
+    <section id="indicators" class="page">
+      <h1>Indicators</h1>
+      <p>RSI: <span id="rsi">45</span></p>
+      <p>EMA: <span id="ema">29800</span></p>
+    </section>
+
+    <section id="portfolio" class="page">
+      <h1>Portfolio</h1>
+      <p>Balance: $<span id="balance">10000</span></p>
+      <p>PnL: $<span id="pnl">0</span></p>
+    </section>
+
+    <section id="risk" class="page">
+      <h1>Risk Manager</h1>
+      <p>Stop Loss: 2%</p>
+      <p>Take Profit: 4%</p>
+    </section>
+
+    <section id="history" class="page">
+      <h1>Trade History</h1>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section id="about" class="page">
+      <h1>About</h1>
+      <p>Crypto Trading Simulator V2 (Paper Trading)</p>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
