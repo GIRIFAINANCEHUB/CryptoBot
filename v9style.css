@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a1a2f;
+  color: #ffd700;
+}
+
+.app { display:flex; height:100vh; }
+.sidebar { width:240px; background:#001f4d; padding:20px; display:flex; flex-direction:column; }
+.sidebar h2 { text-align:center; color:#ffd700; margin-bottom:20px; }
+.sidebar ul { list-style:none; padding:0; flex:1; }
+.sidebar li { padding:12px; cursor:pointer; border-radius:8px; margin-bottom:6px; transition:0.2s; color:#ffd700; }
+.sidebar li:hover { background:#003366; }
+
+.content { flex:1; padding:20px; overflow-y:auto; }
+.page { display:none; }
+.page.active { display:block; }
+
+.cards-container { display:flex; flex-wrap:wrap; gap:15px; }
+.card { background:#001f4d; padding:20px; border-radius:12px; flex:1 1 200px; min-width:180px; text-align:center; color:#ffd700; }
+
+button { padding:10px 15px; margin:5px; background:#ffd700; border:none; border-radius:6px; cursor:pointer; color:#001f4d; font-weight:bold; transition:0.2s; }
+button:hover { background:#ffcc00; }
+
+input, select { margin-top:5px; padding:5px; border-radius:5px; border:none; }
+.underline-label select { border-bottom:2px solid #ffd700; background:transparent; color:#ffd700; font-weight:bold; padding:4px; }
